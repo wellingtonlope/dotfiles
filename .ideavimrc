@@ -1,0 +1,160 @@
+let mapleader = " "
+" :actionlist for all commands
+set surround
+set multiple-cursors
+set history=1000
+set visualbell
+set noerrorbells
+set incsearch " Highlight search results when typing
+set hlsearch " Highlight search results
+"set relativenumber " relative numbers
+set linenumber " line numbers
+" for yanking to clipboard
+set clipboard+=unnamed
+set scrolloff=10 " Display at least 3 lines around you cursor
+
+set ignorecase " Ignore case when searching
+set smartcase " If there is an uppercase in your search term
+set nerdtree " NERDTree
+
+" Which-key settings
+set which-key
+let g:WhichKey_FontSize = 16
+let g:WhichKey_CommandColor = "#41ead4"
+let g:WhichKey_PrefixColor = "#f335b2"
+let g:WhichKey_SortOrder = "by_key_prefix_first"
+
+" KEYMAP
+inoremap jk <Esc>
+
+map <c-n> <a-n>
+map <c-x> <a-x>
+map <c-p> <a-p>
+map g<c-n> g<a-p>
+nnoremap <c-w>j :action Activatesbt-shell-toolwindowToolWindow<CR>
+
+nnoremap <C-l> :<C-u>nohlsearch<CR><C-l>
+
+" Pasting from yank history
+let g:WhichKeyDesc_paste_multiple = "<leader>y Paste multiple"
+nnoremap <leader>y :action PasteMultiple<CR>
+
+" Comment
+let g:WhichKeyDesc_comment = "<leader>c Comments"
+let g:WhichKeyDesc_comment_by_line_comment = "<leader>cc Comment by line comment"
+nnoremap <leader>cc :action CommentByLineComment<CR>
+vmap <leader>cc :action CommentByLineComment<CR>
+let g:WhichKeyDesc_comment_by_block_comment = "<leader>cb Comment by block comment"
+vmap <leader>cb :action CommentByBlockComment<CR>
+
+" Refactorings
+let g:WhichKeyDesc_refactorings = "<leader>r Refactorings"
+let g:WhichKeyDesc_refactorings_rename_element = "<leader>rn Rename element"
+nnoremap <leader>rn :action RenameElement<CR>
+let g:WhichKeyDesc_refactorings_rename_file = "<leader>rf Rename file"
+nnoremap <leader>rf :action RenameFile<CR>
+let g:WhichKeyDesc_refactorings_inline = "<leader>ri Inline"
+nnoremap <leader>ri :action Inline<CR>
+let g:WhichKeyDesc_refactorings_introduce_variable = "<leader>rv Introduce variable"
+nnoremap <leader>rv :action IntroduceVariable<CR>
+let g:WhichKeyDesc_refactorings_extract_method = "<leader>rm Extract method"
+nnoremap <leader>rm :action ExtractMethod<CR>
+let g:WhichKeyDesc_refactorings_quick_list_popup_action = "<leader>rr Quick list popup action"
+nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
+let g:WhichKeyDesc_refactorings_reformat_code = "<leader>rc Reformat code"
+nnoremap <leader>rc :action ReformatCode<CR>
+let g:WhichKeyDesc_refactorings_optimize = "<leader>ro Optimize"
+let g:WhichKeyDesc_refactorings_optimize_imports = "<leader>roi Imports"
+nnoremap <leader>roi :action GoImportsFileAction<CR>
+
+" Implements
+let g:WhichKeyDesc_implements = "<leader>i Implements"
+let g:WhichKeyDesc_implements_methods = "<leader>im Methods"
+nnoremap <leader>im :action ImplementMethods<CR>
+
+" GoTo
+let g:WhichKeyDesc_goto = "<leader>g GoTo"
+let g:WhichKeyDesc_goto_declaration = "<leader>gd Declaration"
+nnoremap <leader>gd :action GotoDeclaration<CR>
+let g:WhichKeyDesc_goto_usages = "<leader>gu Usages"
+nnoremap <leader>gu :action ShowUsages<CR>
+let g:WhichKeyDesc_goto_implementation = "<leader>gi Implementation"
+nnoremap <leader>gi :action GotoImplementation<CR>
+let g:WhichKeyDesc_goto_test = "<leader>gt Test"
+nnoremap <leader>gt :action GotoTest<CR>
+
+" Find
+let g:WhichKeyDesc_search = "<leader>f Find"
+let g:WhichKeyDesc_search_file = "<leader>ff File"
+nnoremap <leader>ff :action GotoFile<CR>
+let g:WhichKeyDesc_search_class = "<leader>fc Class"
+nnoremap <leader>fc :action GotoClass<CR>
+let g:WhichKeyDesc_search_find_in_path = "<leader>fi In file"
+nnoremap <leader>fi :action FindInPath<CR>
+
+" Build and Run
+let g:WhichKeyDesc_build_and_run = "<leader>b Build and Run"
+let g:WhichKeyDesc_build_and_run_class = "<leader>bc Class"
+nnoremap <leader>bc :action RunClass<CR>
+let g:WhichKeyDesc_build_and_run_rerun = "<leader>br Rerun"
+nnoremap <leader>br :action Rerun<CR>
+let g:WhichKeyDesc_build_and_run_test_rerun_failed = "<leader>bf Rerun failed"
+nnoremap <leader>bf :action RerunFailedTests<CR>
+
+" Jumping
+" built-in navigation to navigated items works better
+nnoremap <c-o> :action Back<cr>
+nnoremap <c-i> :action Forward<cr>
+
+" Navigation
+let g:WhichKeyDesc_next = "<leader>] Next"
+let g:WhichKeyDesc_previous = "<leader>[ Previous"
+let g:WhichKeyDesc_next_error = "<leader>]c Next error"
+nnoremap ]c :action GotoNextError<cr>
+let g:WhichKeyDesc_previous_error = "<leader>[c Previous error"
+nnoremap [c :action GotoPreviousError<cr>
+let g:WhichKeyDesc_next_change = "<leader>]h Next change"
+nnoremap ]h :action VcsShowNextChangeMarker<cr>
+let g:WhichKeyDesc_previous_change = "<leader>[h Previous change"
+nnoremap [h :action VcsShowPrevChangeMarker<cr>
+let g:WhichKeyDesc_next_error = "<leader>]] Next method"
+nnoremap ]] :action MethodDown<cr>
+let g:WhichKeyDesc_next_error = "<leader>[[ Previous method"
+nnoremap [[ :action MethodUp<cr>
+
+" Pane navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+
+" Quit or Hidden
+nnoremap <C-n> :tabnext<CR>
+nnoremap <C-p> :tabprev<CR>
+let g:WhichKeyDesc_quit = "<leader>q Quit"
+let g:WhichKeyDesc_quit_tab = "<leader>qq Tab"
+nnoremap  <leader>qq :action CloseContent<cr>
+let g:WhichKeyDesc_quit_others_tab = "<leader>qo Others tab"
+nnoremap  <leader>qo :action CloseAllEditorsButActive<cr>
+let g:WhichKeyDesc_quit_terminal = "<leader>qt Terminal"
+nnoremap  <leader>qt :action HideActiveWindow<cr>
+
+let g:WhichKeyDesc_open = "<leader>o Open"
+let g:WhichKeyDesc_open_terminal = "<leader>o Terminal"
+nnoremap  <leader>ot :action ActivateTerminalToolWindow<cr>
+
+" Window splits
+let g:WhichKeyDesc_splits = "<leader>w Splits"
+let g:WhichKeyDesc_splits_vertical = "<leader>wl Vertical"
+map <leader>wl :action SplitVertically<cr>
+let g:WhichKeyDesc_splits_horizontal = "<leader>wj Horizontal"
+map <leader>wj :action SplitHorizontally<cr>
+
+" Open NERDTree (use q to exit)
+let g:WhichKeyDesc_nerdtree = "<leader>e NERDTree"
+map <leader>e :NERDTreeToggle<CR>
+
+" Bookmark
+let g:WhichKeyDesc_bookmark = "<leader>m Bookmark"
+let g:WhichKeyDesc_bookmark_toggle = "<leader>mt Toggle"
+nnoremap <leader>mt :action ToggleBookmark<cr>
