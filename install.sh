@@ -1,10 +1,10 @@
 #! /bin/bash
 
-if ["$EUID" -ne 0]; then
-	apt install git zsh curl -y
-else
-	sudo apt install git zsh curl -y
+SUDO=''
+if (( $EUID -ne 0 )); then
+	SUDO='sudo'
 fi
+$SUDO apt install git zsh curl -y
 
 mkdir ~/.scripts
 
