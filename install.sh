@@ -14,3 +14,8 @@ curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshrc > 
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.p10k.zsh > ~/.p10k.zsh
 
 $SUDO chsh -s /bin/zsh
+
+echo $SUDO apt update -y && $SUDO apt upgrade -y && $SUDO apt autoremove -y && flatpak update -y > ~/.scripts/up 
+chmod +x ~/.scripts/up 
+cd ~/.scripts
+./up
