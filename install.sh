@@ -1,5 +1,3 @@
-sudo apt install zsh git curl -y
-
 mkdir ~/.scripts
 
 curl -L git.io/antigen > ~/.scripts/antigen.zsh
