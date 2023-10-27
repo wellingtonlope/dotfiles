@@ -4,7 +4,7 @@ SUDO=''
 if (( $EUID -ne 0 )); then
 	SUDO='sudo'
 fi
-$SUDO apt install git zsh curl -y
+$SUDO apt install git zsh curl vim podman -y
 
 mkdir ~/.scripts
 
@@ -13,4 +13,4 @@ curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.ideavimr
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshrc > ~/.zshrc
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.p10k.zsh > ~/.p10k.zsh
 
-zsh
+$SUDO chsh -s /bin/zsh
