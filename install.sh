@@ -5,5 +5,5 @@ sudo apt install git zsh curl -y
 mkdir ~/.scripts
 
 curl -L git.io/antigen > ~/.scripts/antigen.zsh
-curl -L https://github.com/wellingtonlope/dotfiles/blob/main/.ideavimrc ~/.ideavimrc
-curl -L https://github.com/wellingtonlope/dotfiles/blob/main/.p10k.zsh ~/.p10k.zsh
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.ideavimrc ~/.ideavimrc
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.p10k.zsh ~/.p10k.zsh
