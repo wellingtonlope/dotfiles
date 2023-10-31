@@ -82,6 +82,8 @@ let g:WhichKeyDesc_goto_implementation = "<leader>gi Implementation"
 nnoremap <leader>gi :action GotoImplementation<CR>
 let g:WhichKeyDesc_goto_test = "<leader>gt Test"
 nnoremap <leader>gt :action GotoTest<CR>
+let g:WhichKeyDesc_goto_file = "<leader>gf File"
+nnoremap <leader>gf :action SelectInProjectView<CR>
 
 " Find
 let g:WhichKeyDesc_search = "<leader>f Find"
@@ -107,19 +109,19 @@ nnoremap <c-o> :action Back<cr>
 nnoremap <c-i> :action Forward<cr>
 
 " Navigation
-let g:WhichKeyDesc_next = "<leader>] Next"
-let g:WhichKeyDesc_previous = "<leader>[ Previous"
-let g:WhichKeyDesc_next_error = "<leader>]c Next error"
+let g:WhichKeyDesc_next = "] Next"
+let g:WhichKeyDesc_previous = "[ Previous"
+let g:WhichKeyDesc_next_error = "]c Next error"
 nnoremap ]c :action GotoNextError<cr>
-let g:WhichKeyDesc_previous_error = "<leader>[c Previous error"
+let g:WhichKeyDesc_previous_error = "[c Previous error"
 nnoremap [c :action GotoPreviousError<cr>
-let g:WhichKeyDesc_next_change = "<leader>]h Next change"
+let g:WhichKeyDesc_next_change = "]h Next change"
 nnoremap ]h :action VcsShowNextChangeMarker<cr>
-let g:WhichKeyDesc_previous_change = "<leader>[h Previous change"
+let g:WhichKeyDesc_previous_change = "[h Previous change"
 nnoremap [h :action VcsShowPrevChangeMarker<cr>
-let g:WhichKeyDesc_next_error = "<leader>]] Next method"
+let g:WhichKeyDesc_next_error = "]] Next method"
 nnoremap ]] :action MethodDown<cr>
-let g:WhichKeyDesc_next_error = "<leader>[[ Previous method"
+let g:WhichKeyDesc_next_error = "[[ Previous method"
 nnoremap [[ :action MethodUp<cr>
 
 " Pane navigation
