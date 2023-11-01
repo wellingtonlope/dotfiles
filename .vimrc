@@ -1,5 +1,14 @@
 " BASES {{{
     " Base configs goes here.
+    
+    " Enable the clipboard between nvim and apps
+    set clipboard=unnamedplus
+
+    " Enable mouse
+    set mouse=a
+
+    " Show title
+    set title
 
     " Navigate without saving buffers
     set hidden
@@ -91,7 +100,7 @@
     nnoremap <leader>wl :vsplit<cr>
 
     " Buffers
-    nnoremap <leader>qq :q<cr>
+    nnoremap <leader>qq :bw<cr>
     nnoremap <c-n> :bnext<cr>
     nnoremap <c-p> :bprevious<cr>
 
@@ -107,21 +116,27 @@
     nnoremap <leader>wrh <c-w>10>
     nnoremap <leader>wrl <c-w>10<
 
+    " Plugins
+    nnoremap <leader>e :NERDTree<cr>
 " }}}
     
-" STATUS LINE {{{
-    " Clear status line when vimrc is reloaded.
-    set statusline=
+" PLUGINS {{{
+    call plug#begin()
+        " Appearance
+        Plug 'vim-airline/vim-airline'
+        Plug 'ryanoasis/vim-devicons'
 
-    " Status line left side.
-    set statusline+=\ %F\ %M\ %Y\ %R
+        " Utilities
+        Plug 'sheerun/vim-polyglot'
+        Plug 'jiangmiao/auto-pairs'
+        Plug 'preservim/nerdtree'
 
-    " Use a divider to separate the left side from the right side.
-    set statusline+=%=
+        " Git
+        Plug 'airblade/vim-gitgutter'
+    call plug#end()
 
-    " Status line right side.
-    set statusline+=\ percent:\ %p%%
-
-    " Show the status on the second to last line.
-    set laststatus=2
-" }}}
+    " Configs
+    let g:airline_powerline_fonts = 1
+    let g:airline#extensions#tabline#enabled = 1
+    let NERDTreeShowHidden=1
+" }}} 
