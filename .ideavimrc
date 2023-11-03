@@ -26,6 +26,7 @@ let g:WhichKey_SortOrder = "by_key_prefix_first"
 
 " KEYMAP
 inoremap jk <Esc>
+nnoremap <leader>\ :nohlsearch<cr>
 
 map <c-n> <a-n>
 map <c-x> <a-x>

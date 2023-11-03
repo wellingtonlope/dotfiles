@@ -118,7 +118,8 @@
 
     " Plugins
     nnoremap <leader>e :NERDTree<cr>
-" }}}
+
+ " }}}
     
 " PLUGINS {{{
     call plug#begin()
