@@ -4,6 +4,7 @@ SUDO=''
 if [ "$UID" -ne 0 -o "$EUID" -ne 0 ]; then
 	SUDO='sudo'
 fi
+$SUDO apt update
 $SUDO apt install git zsh curl vim build-essential -y
 
 mkdir ~/.scripts
@@ -39,10 +40,9 @@ rm -rf ~/.config/nvim/.git
 # cp -R my-neovim/* ~/.config/nvim
 # rm -r my-neovim
 
-echo $SUDO apt update -y && $SUDO apt upgrade -y && $SUDO apt autoremove -y && brew upgrade > ~/.scripts/up 
+echo "$SUDO apt update -y && $SUDO apt upgrade -y && $SUDO apt autoremove -y && brew upgrade" > ~/.scripts/up 
 chmod +x ~/.scripts/up 
-cd ~/.scripts
-./up
+~/.scripts/up
 
 nvim --headless "+Lazy! sync" +qa
 
