@@ -20,7 +20,14 @@ test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.zshrc
 
-brew install nvim lazygit
+brew install nvim lazygit asdf
+
+asdf plugin add go
+asdf plugin add nodejs
+asdf install go latest
+asdf install nodejs latest
+asdf global go latest
+asdf global nodejs latest
 
 git clone https://github.com/wellingtonlope/my-neovim.git
 mkdir -p ~/.config/nvim
