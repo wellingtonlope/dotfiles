@@ -22,11 +22,11 @@ echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.zshrc
 
 brew install nvim lazygit asdf
 
-asdf plugin add go
+asdf plugin add golang
 asdf plugin add nodejs
-asdf install go latest
+asdf install golang latest
 asdf install nodejs latest
-asdf global go latest
+asdf global golang latest
 asdf global nodejs latest
 
 git clone https://github.com/wellingtonlope/my-neovim.git
