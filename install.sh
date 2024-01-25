@@ -5,7 +5,7 @@ if [ "$UID" -ne 0 -o "$EUID" -ne 0 ]; then
 	SUDO='sudo'
 fi
 $SUDO apt update
-$SUDO apt install git zsh curl vim build-essential -y
+$SUDO apt install git zsh curl vim ripgrep build-essential -y
 
 mkdir ~/.scripts
 
