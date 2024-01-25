@@ -26,10 +26,13 @@ brew install nvim lazygit asdf
 
 asdf plugin add golang
 asdf plugin add nodejs
+asdf plugin add rust
 asdf install golang latest
 asdf install nodejs latest
+asdf install rust latest
 asdf global golang latest
 asdf global nodejs latest
+asdf global rust latest
 
 ~/.asdf/shims/go install github.com/go-delve/delve/cmd/dlv@latest
 
