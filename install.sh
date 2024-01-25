@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SUDO=''
-if (( $EUID -ne 0 )); then
+if [ "$UID" -ne 0 -o "$EUID" -ne 0 ]; then
 	SUDO='sudo'
 fi
 $SUDO apt install git zsh curl vim build-essential -y
