@@ -4,7 +4,7 @@ SUDO=''
 if (( $EUID -ne 0 )); then
 	SUDO='sudo'
 fi
-$SUDO apt install git zsh curl vim -y
+$SUDO apt install git zsh curl vim build-essential -y
 
 mkdir ~/.scripts
 
@@ -16,6 +16,11 @@ curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.p10k.zsh
 $SUDO chsh -s /bin/zsh
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.zshrc
+
+zsh
 
 brew install nvim lazygit
 
