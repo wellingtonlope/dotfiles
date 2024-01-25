@@ -15,7 +15,7 @@ curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshrc >~
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshenv >~/.zshenv
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.p10k.zsh >~/.p10k.zsh
 
-$SUDO chsh -s /bin/zsh
+$SUDO chsh -s /bin/zsh $USER
 
 echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
