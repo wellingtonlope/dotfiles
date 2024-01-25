@@ -24,9 +24,12 @@ brew install nvim lazygit
 
 git clone https://github.com/wellingtonlope/my-neovim.git
 mkdir -p ~/.config/nvim
-mv my-neovim ~/.config/nvim
+mv -R my-neovim/* ~/.config/nvim
+mv -r my-neovim
 
 echo $SUDO apt update -y && $SUDO apt upgrade -y && $SUDO apt autoremove -y && brew upgrade > ~/.scripts/up 
 chmod +x ~/.scripts/up 
 cd ~/.scripts
 ./up
+
+zsh
