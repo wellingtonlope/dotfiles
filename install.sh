@@ -29,6 +29,8 @@ asdf install nodejs latest
 asdf global golang latest
 asdf global nodejs latest
 
+go install github.com/go-delve/delve/cmd/dlv@latest
+
 git clone https://github.com/wellingtonlope/my-neovim.git
 mkdir -p ~/.config/nvim
 cp -R my-neovim/* ~/.config/nvim
