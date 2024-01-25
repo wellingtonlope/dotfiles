@@ -32,4 +32,6 @@ chmod +x ~/.scripts/up
 cd ~/.scripts
 ./up
 
+nvim --headless "+Lazy! sync" +qa
+
 zsh
