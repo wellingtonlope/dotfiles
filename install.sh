@@ -31,10 +31,13 @@ asdf global nodejs latest
 
 ~/.asdf/shims/go install github.com/go-delve/delve/cmd/dlv@latest
 
-git clone https://github.com/wellingtonlope/my-neovim.git
-mkdir -p ~/.config/nvim
-cp -R my-neovim/* ~/.config/nvim
-rm -r my-neovim
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+
+# git clone https://github.com/wellingtonlope/my-neovim.git
+# mkdir -p ~/.config/nvim
+# cp -R my-neovim/* ~/.config/nvim
+# rm -r my-neovim
 
 echo $SUDO apt update -y && $SUDO apt upgrade -y && $SUDO apt autoremove -y && brew upgrade > ~/.scripts/up 
 chmod +x ~/.scripts/up 
