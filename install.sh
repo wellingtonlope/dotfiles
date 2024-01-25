@@ -9,17 +9,18 @@ $SUDO apt install git zsh curl vim build-essential -y
 
 mkdir ~/.scripts
 
-curl -L git.io/antigen > ~/.scripts/antigen.zsh
-curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.ideavimrc > ~/.ideavimrc
-curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshrc > ~/.zshrc
-curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.p10k.zsh > ~/.p10k.zsh
+curl -L git.io/antigen >~/.scripts/antigen.zsh
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.ideavimrc >~/.ideavimrc
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshrc >~/.zshrc
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshenv >~/.zshenv
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.p10k.zsh >~/.p10k.zsh
 
 $SUDO chsh -s /bin/zsh
 
 echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.zshrc
+echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >>~/.zshrc
 
 brew install nvim lazygit asdf
 
@@ -40,8 +41,8 @@ rm -rf ~/.config/nvim/.git
 # cp -R my-neovim/* ~/.config/nvim
 # rm -r my-neovim
 
-echo "$SUDO apt update -y && $SUDO apt upgrade -y && $SUDO apt autoremove -y && brew upgrade" > ~/.scripts/up 
-chmod +x ~/.scripts/up 
+echo "$SUDO apt update -y && $SUDO apt upgrade -y && $SUDO apt autoremove -y && brew upgrade" >~/.scripts/up
+chmod +x ~/.scripts/up
 ~/.scripts/up
 
 nvim --headless "+Lazy! sync" +qa
