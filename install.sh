@@ -5,7 +5,7 @@ if [ "$UID" -ne 0 -o "$EUID" -ne 0 ]; then
 	SUDO='sudo'
 fi
 $SUDO apt update
-$SUDO apt install git zsh curl vim ripgrep build-essential -y
+$SUDO apt install git zsh curl ripgrep build-essential -y
 
 mkdir ~/.scripts
 
@@ -14,6 +14,8 @@ curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.ideavimr
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshrc >~/.zshrc
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshenv >~/.zshenv
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.p10k.zsh >~/.p10k.zsh
+
+git config --global core.editor nvim
 
 $SUDO chsh -s /bin/zsh $USER
 
