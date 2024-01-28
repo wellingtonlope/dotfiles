@@ -1,9 +1,10 @@
 return {
-	{ "catppuccin/catppuccin" },
-	{
-		"LazyVim/LazyVim",
-		opts = {
-			colorscheme = "catppuccin-frappe",
-		},
-	},
+  { "catppuccin/catppuccin" },
+  { "Mofiqul/dracula.nvim" },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "dracula",
+    },
+  },
 }
