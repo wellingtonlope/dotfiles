@@ -12,7 +12,6 @@ mkdir ~/.scripts
 curl -L git.io/antigen >~/.scripts/antigen.zsh
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.ideavimrc >~/.ideavimrc
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshrc >~/.zshrc
-curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshenv >~/.zshenv
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.p10k.zsh >~/.p10k.zsh
 
 git config --global core.editor nvim
@@ -42,7 +41,8 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/nvim/lazyvim.json >~/.config/nvim/lazyvim.json
-curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/nvim/plugins/colorscheme.lua >~/.config/nvim/plugins/colorscheme.lua
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/nvim/lua/plugins/colorscheme.lua >~/.config/nvim/lua/plugins/colorscheme.lua
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/nvim/lua/plugins/coverage.lua >~/.config/nvim/lua/plugins/coverage.lua
 
 echo "$SUDO apt update -y && $SUDO apt upgrade -y && $SUDO apt autoremove -y && brew upgrade" >~/.scripts/up
 chmod +x ~/.scripts/up
