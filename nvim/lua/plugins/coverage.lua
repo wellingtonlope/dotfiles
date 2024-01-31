@@ -54,7 +54,15 @@ return {
 				require("coverage").load()
 				require("coverage").show()
 			end,
-			desc = "Load",
+			desc = "Load signs",
+		},
+		{
+			"<leader>tch",
+			function()
+				require("coverage").load()
+				require("coverage").hide()
+			end,
+			desc = "Hide signs",
 		},
 		{
 			"<leader>tcs",
