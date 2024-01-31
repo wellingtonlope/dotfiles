@@ -48,6 +48,4 @@ echo "$SUDO apt update -y && $SUDO apt upgrade -y && $SUDO apt autoremove -y && 
 chmod +x ~/.scripts/up
 ~/.scripts/up
 
-nvim --headless "+Lazy! sync" +qa
-
 zsh
