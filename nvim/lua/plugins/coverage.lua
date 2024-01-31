@@ -19,6 +19,7 @@ return {
 		{
 			"<leader>tcr",
 			function()
+				io.popen("mkdir " .. vim.loop.cwd() .. "/coverage")
 				require("neotest").run.run({
 					extra_args = { "-coverprofile=" .. vim.loop.cwd() .. "/coverage/coverage.out" },
 				})
@@ -28,6 +29,7 @@ return {
 		{
 			"<leader>tct",
 			function()
+				io.popen("mkdir " .. vim.loop.cwd() .. "/coverage")
 				require("neotest").run.run({
 					vim.fn.expand("%"),
 					extra_args = { "-coverprofile=" .. vim.loop.cwd() .. "/coverage/coverage.out" },
@@ -38,6 +40,7 @@ return {
 		{
 			"<leader>tcT",
 			function()
+				io.popen("mkdir " .. vim.loop.cwd() .. "/coverage")
 				require("neotest").run.run({
 					vim.loop.cwd(),
 					extra_args = { "-coverprofile=" .. vim.loop.cwd() .. "/coverage/coverage.out" },
