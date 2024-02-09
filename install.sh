@@ -43,8 +43,12 @@ rm -rf ~/.config/nvim/.git
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/nvim/lazyvim.json >~/.config/nvim/lazyvim.json
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/nvim/lua/plugins/colorscheme.lua >~/.config/nvim/lua/plugins/colorscheme.lua
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/nvim/lua/plugins/coverage.lua >~/.config/nvim/lua/plugins/coverage.lua
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/nvim/lua/config/options.lua >~/.config/nvim/lua/config/options.lua
 
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/starship.toml >~/.config/starship.toml
+
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/scripts/nvim_paste >~/.scripts/nvim_paste
+chmod +x ~/.scripts/nvim_paste
 
 echo "$SUDO apt update -y && $SUDO apt upgrade -y && $SUDO apt autoremove -y && brew upgrade" >~/.scripts/up
 chmod +x ~/.scripts/up
