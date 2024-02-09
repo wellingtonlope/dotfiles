@@ -37,7 +37,6 @@ asdf global rust latest
 
 ~/.asdf/shims/go install github.com/go-delve/delve/cmd/dlv@latest
 
-starship init zsh
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/starship.toml >~/.config/starship.toml
 
 git clone https://github.com/LazyVim/starter ~/.config/nvim
