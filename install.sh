@@ -13,7 +13,6 @@ curl -L git.io/antigen >~/.scripts/antigen.zsh
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.ideavimrc >~/.ideavimrc
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshrc >~/.zshrc
 # curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.p10k.zsh >~/.p10k.zsh
-curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/starship.toml >~/.config/starship.toml
 
 git config --global core.editor nvim
 
@@ -37,6 +36,9 @@ asdf global nodejs latest
 asdf global rust latest
 
 ~/.asdf/shims/go install github.com/go-delve/delve/cmd/dlv@latest
+
+starship preset gruvbox-rainbow -o ~/.config/starship.toml
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/starship.toml >~/.config/starship.toml
 
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
