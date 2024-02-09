@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 SUDO=''
 if [ "$UID" -ne 0 -o "$EUID" -ne 0 ]; then
@@ -37,8 +37,6 @@ asdf global rust latest
 
 ~/.asdf/shims/go install github.com/go-delve/delve/cmd/dlv@latest
 
-source ~/.zshrc
-starship preset gruvbox-rainbow -o ~/.config/starship.toml
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/starship.toml >~/.config/starship.toml
 
 git clone https://github.com/LazyVim/starter ~/.config/nvim
