@@ -7,16 +7,6 @@ fi
 $SUDO apt update
 $SUDO apt install git zsh curl ripgrep build-essential -y
 
-mkdir ~/.scripts
-
-curl -L git.io/antigen >~/.scripts/antigen.zsh
-curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.ideavimrc >~/.ideavimrc
-curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshrc >>~/.zshrc
-curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.tmux.conf >~/.tmux.conf
-# curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.p10k.zsh >~/.p10k.zsh
-
-git config --global core.editor nvim
-
 $SUDO chsh -s /bin/zsh $USER
 
 echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -25,6 +15,8 @@ test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/bre
 echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >>~/.zshrc
 
 brew install nvim lazygit asdf starship
+
+git config --global core.editor nvim
 
 asdf plugin add golang
 asdf plugin add nodejs
@@ -40,13 +32,19 @@ asdf global rust latest
 
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
-
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/nvim/lazyvim.json >~/.config/nvim/lazyvim.json
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/nvim/lua/plugins/colorscheme.lua >~/.config/nvim/lua/plugins/colorscheme.lua
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/nvim/lua/plugins/coverage.lua >~/.config/nvim/lua/plugins/coverage.lua
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/nvim/lua/config/options.lua >~/.config/nvim/lua/config/options.lua
 
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/starship.toml >~/.config/starship.toml
+
+mkdir ~/.scripts
+curl -L git.io/antigen >~/.scripts/antigen.zsh
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.ideavimrc >~/.ideavimrc
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshrc >>~/.zshrc
+curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.tmux.conf >~/.tmux.conf
+# curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.p10k.zsh >~/.p10k.zsh
 
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/scripts/nvim_paste >~/.scripts/nvim_paste
 chmod +x ~/.scripts/nvim_paste
