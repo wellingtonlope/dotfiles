@@ -47,7 +47,6 @@ curl -L git.io/antigen >~/.scripts/antigen.zsh
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.ideavimrc >~/.ideavimrc
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.zshrc >>~/.zshrc
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.tmux.conf >~/.tmux.conf
-# curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/.p10k.zsh >~/.p10k.zsh
 
 curl -L https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/scripts/nvim_paste >~/.scripts/nvim_paste
 chmod +x ~/.scripts/nvim_paste
