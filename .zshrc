@@ -20,8 +20,11 @@ antigen apply
 # starship
 eval "$(starship init zsh)"
 
+# GO
+export GOPATH=~/go
+
 # $PATH
 export PATH=$PATH:~/.scripts
 export PATH=$PATH:~/.asdf/shims
-export PATH=$PATH:$(asdf where golang)/packages/bin
+export PATH=$PATH:~/go/bin
 export PATH=$PATH:$(asdf where rust)/bin
