@@ -18,4 +18,5 @@ export GOBIN=$GOPATH/bin
 # $PATH
 export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$HOME/.asdf/shims
+export PATH=$PATH:$GOBIN
 export PATH=$PATH:$(asdf where rust)/bin
