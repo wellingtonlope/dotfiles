@@ -1,4 +1,4 @@
-source ~/.scripts/antigen.zsh
+source $HOME/.scripts/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -12,10 +12,10 @@ antigen apply
 eval "$(starship init zsh)"
 
 # GO
-export GOPATH=~/go
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
 
 # $PATH
-export PATH=$PATH:~/.scripts
-export PATH=$PATH:~/.asdf/shims
-export PATH=$PATH:~/go/bin
+export PATH=$PATH:$HOME/.scripts
+export PATH=$PATH:$HOME/.asdf/shims
 export PATH=$PATH:$(asdf where rust)/bin
