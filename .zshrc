@@ -14,6 +14,7 @@ eval "$(starship init zsh)"
 # GO
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
+export GOROOT=$(asdf where golang)/go
 
 # $PATH
 export PATH=$PATH:$HOME/.scripts
