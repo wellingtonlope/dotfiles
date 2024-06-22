@@ -14,4 +14,6 @@ with import <nixpkgs> {}; [
         rustc
         rust-analyzer
         zulu
+        docker
+        docker-compose
 ]
