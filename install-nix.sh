@@ -8,8 +8,10 @@ rm -rf $HOME/.config/nvim/.git
 git clone https://github.com/wellingtonlope/dotfiles.git
 cd dotfiles
 
-stow base
-stow nvim
+stow --adopt base
+stow --adopt nvim
+
+git reset --hard
 
 nix-env -irf $HOME/env.nix
 
