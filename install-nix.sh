@@ -2,9 +2,6 @@
 
 nix-env -iA nixpkgs.stow nixpkgs.git
 
-mkdir git
-cd git
-
 git clone https://github.com/wellingtonlope/dotfiles.git
 cd dotfiles
 
