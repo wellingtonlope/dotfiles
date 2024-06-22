@@ -1,0 +1,11 @@
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+[shell]
+program = "/bin/zsh"
+
+[font]
+normal = { family = "MesloLGM Nerd Font", style = "Regular" }
+size = 14
+
+[window]
+padding = { x = 8, y = 0 }
