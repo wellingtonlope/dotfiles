@@ -2,6 +2,7 @@ with import <userpkgs> {}; [
         # base
         starship
         stow
+        ollama
 
         # dev
         neovim

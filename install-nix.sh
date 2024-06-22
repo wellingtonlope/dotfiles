@@ -1,6 +1,6 @@
 #!/bin/bash
 
-nix-channel --add https://nixos.org/channels/nixpkgs-unstable userpkgs
+nix-channel --add https://nixos.org/channels/nixos-24.05 userpkgs
 nix-channel --update
 
 nix-env -iA userpkgs.stow
