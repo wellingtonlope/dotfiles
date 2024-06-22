@@ -1,6 +1,6 @@
 #!/bin/bash
 
-nix-env -iA stow git
+nix-env -iA nixpkgs.stow nixpkgs.git
 
 mkdir git
 cd git
