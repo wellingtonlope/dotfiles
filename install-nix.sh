@@ -13,7 +13,7 @@ stow --adopt nvim
 
 git reset --hard
 
-nix-env -irf $HOME/env.nix
+nix-env -if $HOME/env.nix
 
 git config --global core.editor nvim
 
