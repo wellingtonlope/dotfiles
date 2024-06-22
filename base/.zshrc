@@ -1,4 +1,4 @@
-source $HOME/.scripts/antigen.zsh
+source $HOME/.scripts_untracked/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundle zsh-users/zsh-syntax-highlighting
