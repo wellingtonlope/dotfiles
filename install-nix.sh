@@ -12,6 +12,6 @@ nix-env -irf ~/env.nix
 
 git config --global core.editor nvim
 
+curl -L git.io/antigen >$HOME/scripts/antigen.zsh
 chsh -s $(which zsh) $USER
-
 zsh

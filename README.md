@@ -1,7 +1,8 @@
 # My Dotfiles
 
-Fist, install Nix package manager:
-[https://nixos.org/download](https://nixos.org/download)
+Dependencies:
+- [Nix Package Manager](https://nixos.org/download)
+- `zsh, git and curl`
 
 Now, execute to install:
 ```bash

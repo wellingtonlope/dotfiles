@@ -1,9 +1,5 @@
 with import <nixpkgs> {}; [
         # base
-        git
-        curl
-        zsh
-        antigen
         starship
         stow
 
