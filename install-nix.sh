@@ -17,6 +17,7 @@ nix-env -irf $HOME/env.nix
 
 git config --global core.editor nvim
 
+mkdir $HOME/.scripts_untracked
 curl -L git.io/antigen >$HOME/.scripts_untracked/antigen.zsh
 chsh -s $(which zsh) $USER
 zsh
