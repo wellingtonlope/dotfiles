@@ -1,4 +1,4 @@
-with import <userpkgs> {}; [
+with import <nixpkgs> {}; [
         # base
         starship
         stow
