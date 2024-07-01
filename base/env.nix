@@ -3,7 +3,6 @@ with import <nixpkgs> {}; [
         starship
         stow
         unzip
-        ollama
 
         # dev
         neovim
