@@ -35,15 +35,35 @@ return {
 		vim.keymap.set("v", "<leader>or", ":Gen Review_Code<CR>", { buffer = buffer, desc = "Review Code" })
 
 		local gen = require("gen")
-		gen.prompts["Improve_Grammar_Spelling"] = {
-			prompt = 'Check the following sentence for grammar and clarity: "$text". Rewrite it for better readability while maintaining its original meaning. The result should be just the new sentence without additional details and explanation.',
+		gen.prompts["Improve_Grammar_Spelling_English"] = {
+			prompt = 'Check the following sentence for grammar and clarity in english: "$text". Rewrite it for better readability while maintaining its original meaning. The result should be just the new sentence without additional details and explanation.',
 			replace = true,
 		}
 		vim.keymap.set(
 			"v",
-			"<leader>og",
-			":Gen Improve_Grammar_Spelling<CR>",
-			{ buffer = buffer, desc = "Improve Grammar" }
+			"<leader>oge",
+			":Gen Improve_Grammar_Spelling_English<CR>",
+			{ buffer = buffer, desc = "English" }
+		)
+		gen.prompts["Improve_Grammar_Spelling_Spanish"] = {
+			prompt = 'Check the following sentence for grammar and clarity in spanish: "$text". Rewrite it for better readability while maintaining its original meaning. The result should be just the new sentence without additional details and explanation.',
+			replace = true,
+		}
+		vim.keymap.set(
+			"v",
+			"<leader>ogs",
+			":Gen Improve_Grammar_Spelling_Spanish<CR>",
+			{ buffer = buffer, desc = "Spanish" }
+		)
+		gen.prompts["Improve_Grammar_Spelling_Portuguese"] = {
+			prompt = 'Check the following sentence for grammar and clarity in portuguese: "$text". Rewrite it for better readability while maintaining its original meaning. The result should be just the new sentence without additional details and explanation.',
+			replace = true,
+		}
+		vim.keymap.set(
+			"v",
+			"<leader>ogp",
+			":Gen Improve_Grammar_Spelling_Portuguese<CR>",
+			{ buffer = buffer, desc = "Spanish" }
 		)
 
 		gen.prompts["Translate_Portuguese_to_English"] = {
@@ -106,6 +126,11 @@ return {
 			mode = { "v" },
 			"<leader>ot",
 			desc = "Translate",
+		},
+		{
+			mode = { "v" },
+			"<leader>og",
+			desc = "Improve Grammar",
 		},
 		{
 			mode = { "v" },
