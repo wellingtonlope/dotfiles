@@ -26,6 +26,7 @@ git config --global core.editor nvim
 chmod +x $HOME/.scripts/*
 
 mkdir $HOME/.scripts_untracked
+ln -s "$(which sed)" $HOME/.scripts_untracked/gsed
 curl -L git.io/antigen >$HOME/.scripts_untracked/antigen.zsh
 chsh -s $(which zsh) $USER
 zsh

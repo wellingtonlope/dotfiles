@@ -4,6 +4,7 @@ with import <nixpkgs> {}; [
         stow
         unzip
         tmux
+        gnused
 
         # dev
         neovim

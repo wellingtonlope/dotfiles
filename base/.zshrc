@@ -14,4 +14,5 @@ export GOBIN=$GOPATH/bin
 
 # $PATH
 export PATH=$PATH:$HOME/.scripts
+export PATH=$PATH:$HOME/.scripts_untracked
 export PATH=$PATH:$GOBIN
