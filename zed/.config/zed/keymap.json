@@ -1,0 +1,62 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "H": null,
+      "L": null,
+      "ctrl-h": null,
+      "ctrl-j": null,
+      "ctrl-k": null,
+      "ctrl-l": null
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      "shift-h": "pane::ActivatePrevItem",
+      "shift-l": "pane::ActivateNextItem",
+      "space b d": "pane::CloseActiveItem",
+      "space b o": "pane::CloseInactiveItems",
+      "space e": "workspace::ToggleLeftDock",
+      "space f t": "workspace::ToggleBottomDock",
+      "space |": "pane::SplitRight",
+      "space space": "file_finder::Toggle",
+      "space /": "workspace::NewSearch",
+      "g d": "editor::GoToDefinition",
+      "g I": "editor::GoToImplementation",
+      "g r": "editor::FindAllReferences",
+      "space c a": "editor::ToggleCodeActions"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+      "space g c": "editor::ToggleComments"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in insert mode
+      // e.g.
+      // "j j": "vim::NormalBefore" // remap jj in insert mode to escape.
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"]
+    }
+  }
+]
