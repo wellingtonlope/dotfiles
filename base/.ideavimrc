@@ -28,9 +28,9 @@ let g:WhichKey_SortOrder = "by_key_prefix_first"
 inoremap jk <Esc>
 nnoremap <leader>\ :nohlsearch<cr>
 
-map <c-n> <a-n>
+map <S-l> <a-n>
 map <c-x> <a-x>
-map <c-p> <a-p>
+map <S-h> <a-p>
 map g<c-n> g<a-p>
 nnoremap <c-w>j :action Activatesbt-shell-toolwindowToolWindow<CR>
 
@@ -132,11 +132,12 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-j> <C-w>j
 
 " Quit or Hidden
-nnoremap <C-n> :tabnext<CR>
-nnoremap <C-p> :tabprev<CR>
+iunmap <S-l>
+iunmap <S-h>
+nnoremap <S-l> :tabnext<CR>
+nnoremap <S-h> :tabprev<CR>
 let g:WhichKeyDesc_quit = "<leader>q Quit"
-let g:WhichKeyDesc_quit_tab = "<leader>qq Tab"
-nnoremap  <leader>qq :action CloseContent<cr>
+let g:WhichKeyDesc_quit_tab = "<leader>qq Tab" nnoremap  <leader>qq :action CloseContent<cr>
 let g:WhichKeyDesc_quit_others_tab = "<leader>qo Others tab"
 nnoremap  <leader>qo :action CloseAllEditorsButActive<cr>
 let g:WhichKeyDesc_quit_terminal = "<leader>qt Terminal"
