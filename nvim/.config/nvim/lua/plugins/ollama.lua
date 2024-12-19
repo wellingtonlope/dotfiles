@@ -2,7 +2,7 @@ return {
 	"David-Kunz/gen.nvim",
 	config = function()
 		require("gen").setup({
-			model = "gemma2", -- The default model to use.
+			model = "llama3.2", -- The default model to use.
 			host = "localhost", -- The host running the Ollama service.
 			port = "11434", -- The port on which the Ollama service is listening.
 			display_mode = "float", -- The display mode. Can be "float" or "split".
