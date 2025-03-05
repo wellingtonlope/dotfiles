@@ -85,7 +85,7 @@
     set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
     " Enable fold
-    set foldmethod=indent
+    " set foldmethod=indent
 " }}}
 
 " MAPPINGS {{{
@@ -120,24 +120,3 @@
     nnoremap <leader>e :NERDTree<cr>
 
  " }}}
-    
-" PLUGINS {{{
-    call plug#begin()
-        " Appearance
-        Plug 'vim-airline/vim-airline'
-        Plug 'ryanoasis/vim-devicons'
-
-        " Utilities
-        Plug 'sheerun/vim-polyglot'
-        Plug 'jiangmiao/auto-pairs'
-        Plug 'preservim/nerdtree'
-
-        " Git
-        Plug 'airblade/vim-gitgutter'
-    call plug#end()
-
-    " Configs
-    let g:airline_powerline_fonts = 1
-    let g:airline#extensions#tabline#enabled = 1
-    let NERDTreeShowHidden=1
-" }}} 

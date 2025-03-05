@@ -16,4 +16,4 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$HOME/.scripts_untracked
 export PATH=$PATH:$GOBIN
-export PATH=$PATH:$HOME/.asdf/shims/
+export PATH=$PATH:$HOME/.asdf/shims
