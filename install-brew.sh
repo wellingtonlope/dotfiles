@@ -12,14 +12,8 @@ brew install nvim lazygit asdf starship stow tmux gnu-sed ripgrep
 git config --global core.editor nvim
 
 asdf plugin add golang
-asdf plugin add nodejs
-asdf plugin add rust
 asdf install golang latest
-asdf install nodejs latest
-asdf install rust latest
-asdf global golang latest
-asdf global nodejs latest
-asdf global rust latest
+asdf set -u golang latest
 
 export GOPATH=~/go
 
