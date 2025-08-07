@@ -1,10 +1,6 @@
 # My Dotfiles
 
-Dependencies:
-- [Nix Package Manager](https://nixos.org/download)
-- `zsh, git and curl`
-
-Now, execute to install:
+Execute to install:
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/install-nix.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/wellingtonlope/dotfiles/main/install-{tecnology}.sh)"
 ```
