@@ -21,8 +21,8 @@ export GOPATH=~/go
 
 ~/.asdf/shims/go install github.com/go-delve/delve/cmd/dlv@latest
 
-git clone https://github.com/wellingtonlope/dotfiles.git ~/
-cd ~/dotfiles
+git clone https://github.com/wellingtonlope/dotfiles.git $HOME/
+cd $HOME/dotfiles
 
 stow --adopt base
 stow --adopt nvim
