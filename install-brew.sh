@@ -22,8 +22,7 @@ export GOPATH=~/go
 git clone https://github.com/wellingtonlope/dotfiles.git
 cd dotfiles
 
-stow --adopt base
-stow --adopt nvim
+./install-stow.sh
 
 git reset --hard
 
