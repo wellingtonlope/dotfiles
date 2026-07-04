@@ -7,7 +7,7 @@ test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >>~/.zshenv
 
-brew install nvim lazygit asdf starship stow tmux gnu-sed ripgrep
+brew install nvim lazygit asdf starship stow tmux tmuxp gnu-sed ripgrep
 
 git config --global core.editor nvim
 

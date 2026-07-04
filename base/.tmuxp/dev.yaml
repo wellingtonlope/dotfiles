@@ -1,0 +1,10 @@
+session_name: dev
+windows:
+  - window_name: home
+    start_directory: "~"
+    panes:
+      - focus: true
+  - window_name: dotfiles
+    start_directory: ~/dotfiles
+    panes:
+      - focus: true
